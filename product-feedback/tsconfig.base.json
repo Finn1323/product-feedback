@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@product-feedback/lib": ["libs/src/index.ts"],
-      "@components/*": ["libs/src/lib/components/*"]
+      "@components/*": ["libs/src/lib/components/*"],
+      "@product-feedback/lib": ["libs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
