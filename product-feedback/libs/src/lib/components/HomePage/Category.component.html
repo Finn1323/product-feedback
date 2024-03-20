@@ -1,0 +1,22 @@
+<div>
+  <div
+    class="w-64 h-36 rounded-xl font-Jost bg-gradient-to-r from-blue-sky via-purple-default to-orange text-white flex items-end mb-4"
+  >
+    <div class="p-4">
+      <h1 class="text-xl font-bold">Frontend Mentor</h1>
+      <h2 class="text-blue-background">Feedback Board</h2>
+    </div>
+  </div>
+
+  <div class="w-64 rounded-xl font-Jost bg-white flex gap-4 flex-wrap p-4">
+    @for (category of categories; track category; let i = $index ) {
+    <button
+      class="bg-blue-background text-blue-active font-semibold text-center px-4 py-2 rounded-lg hover:bg-blue-hover"
+      [ngClass]="{ active: activeCategoryIndex === i }"
+      (click)="setActiveCategory(i)"
+    >
+      {{ category }}
+    </button>
+    }
+  </div>
+</div>
