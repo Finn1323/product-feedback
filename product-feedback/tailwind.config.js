@@ -24,6 +24,7 @@ module.exports = {
           hover: '#E98888',
         },
         orange: '#F49F85',
+        background: '#F7F8FD',
       },
       fontFamily: {
         Jost: ['Jost', 'sans-serif'],
