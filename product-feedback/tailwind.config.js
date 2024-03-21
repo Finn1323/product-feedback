@@ -29,6 +29,9 @@ module.exports = {
       fontFamily: {
         Jost: ['Jost', 'sans-serif'],
       },
+      content: {
+        chevronDownIcon: 'url("../src/assets/icons/chevron-down.svg")',
+      },
     },
   },
 
