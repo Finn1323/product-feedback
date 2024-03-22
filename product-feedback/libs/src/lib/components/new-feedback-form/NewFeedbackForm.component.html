@@ -1,0 +1,92 @@
+<div class="flex flex-col justify-center items-center bg-background py-4">
+  <div class="flex flex-col gap-16">
+    <a
+      class="flex flex-row gap-4 font-Jost font-bold self-start text-blue-greyish text-sm"
+      href="/"
+    >
+      <img
+        class="w-3 aspect-auto"
+        src="../../../../../assets/icons/icon-arrow-left.svg"
+        alt="Back"
+      />
+      Go Back</a
+    >
+
+    <form
+      class="font-Jost bg-white p-10 rounded-xl flex flex-col w-full gap-10 relative"
+      [formGroup]="newFeedbackForm"
+      (ngSubmit)="addFeedback()"
+    >
+      <img
+        src="../../../../../assets/icons/icon-new-feedback.svg"
+        alt="new-feedback"
+        class="w-14 absolute -top-7"
+      />
+
+      <h1 class="font-bold text-2xl text-blue-dark mt-8">
+        Create New Feedback
+      </h1>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-blue-dark font-bold text-sm" for="title"
+          >Feedback Title</label
+        >
+        <span class="text-blue-greyish text-sm"
+          >Add a short, descriptive headline</span
+        >
+        <input
+          formControlName="title"
+          class="h-12 rounded-md bg-background px-8"
+          type="text"
+          id="title"
+          required
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-blue-dark font-bold text-sm" for="category"
+          >Category</label
+        >
+        <span class="text-blue-greyish text-sm"
+          >Choose a category for your feedback</span
+        >
+        <select
+          formControlName="category"
+          class="h-12 rounded-md bg-background px-8"
+          name="category"
+          id="category"
+          required
+        >
+          <option value="Feature">Feature</option>
+          <option value="UI">UI</option>
+          <option value="UX">UX</option>
+          <option value="Enhancement">Enhancement</option>
+          <option value="Bug">Bug</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-blue-dark font-bold text-sm" for="detail"
+          >Feedback Detail</label
+        >
+        <span class="text-blue-greyish text-sm"
+          >Include any specific comments on what should be improved, added,
+          etc.</span
+        >
+        <textarea
+          formControlName="detail"
+          class="rounded-md bg-background px-8 resize-none"
+          name="detail"
+          id="detail"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+
+      <div class="self-end flex gap-5 text-white">
+        <a class="bg-blue-dark rounded-xl px-6 py-3" href="/">Cancel</a>
+        <button class="bg-purple-default rounded-xl px-6">Add Feedback</button>
+      </div>
+    </form>
+  </div>
+</div>
