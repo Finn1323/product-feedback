@@ -1,0 +1,99 @@
+<div class="bg-white max-w-[540px] w-full p-11 relative rounded-xl my-5">
+  <img
+    class="-top-5 left-5 absolute"
+    src="../assets/images/circle-image.svg"
+    alt="circle-image"
+  />
+  <h1 class="mb-16 font-Jost text-2xl font-bold text-blue-dark">
+    Editing ‘Add a dark theme option’
+  </h1>
+
+  <div>
+    <div>
+      <label class="text-blue-dark font-Jost font-bold text-sm" for=""
+        >Feedback title</label
+      >
+      <span class="block font-Jost text-sm text-blue-primary"
+        >Add a short, descriptive headline</span
+      >
+      <input
+        class="bg-transparent rounded py-4 px-6 placeholder:text-blue-dark font-Jost text-sm"
+        type="text"
+        placeholder="Please add a dark theme option"
+      />
+    </div>
+
+    <div>
+      <label class="text-blue-dark font-Jost font-bold text-sm" for=""
+        >Category</label
+      >
+      <span class="block font-Jost text-sm text-blue-primary"
+        >Choose a category for your feedback</span
+      >
+      <select
+        class="bg-transparent rounded py-4 px-6 placeholder:text-blue-dark font-Jost text-sm"
+        type="text"
+        placeholder="Please add a dark theme option"
+      >
+        @for(item of optionItems1; track item){
+        <option>{{ item }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label class="text-blue-dark font-Jost font-bold text-sm" for=""
+        >Update Status</label
+      >
+      <span class="block font-Jost text-sm text-blue-primary"
+        >Change feedback state</span
+      >
+      <select
+        class="bg-transparent rounded py-4 px-6 placeholder:text-blue-dark font-Jost text-sm"
+        type="text"
+        placeholder="Please add a dark theme option"
+      >
+        @for(item of optionItems2; track item) {
+        <option>{{ item }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label class="text-blue-dark font-Jost font-bold text-sm" for=""
+        >Feedback Detail</label
+      >
+      <span class="block font-Jost text-sm text-blue-primary"
+        >Include any specific comments on what should be improved, added,
+        etc.</span
+      >
+      <textarea
+        class="bg-transparent rounded py-4 px-6 placeholder:text-blue-dark font-Jost text-sm"
+        type="text"
+        placeholder="It would help people with light sensitivities and who prefer dark mode."
+      >
+      </textarea>
+    </div>
+  </div>
+  <div class="flex items-center justify-between">
+    <div>
+      <button
+        class="bg-red-default text-sm font-Jost font-bold py-3 px-6 hover:bg-red-hover text-white rounded-xl"
+      >
+        Delete
+      </button>
+    </div>
+    <div class="flex items-center gap-3">
+      <button
+        class="text-white text-sm bg-blue-dark font-bold py-3 px-6 rounded-xl hover:bg-blue-greyish"
+      >
+        Cancel
+      </button>
+      <button
+        class="text-white text-sm font-Jost font-bold bg-purple-default hover:bg-purple-hover py-3 px-6 rounded-xl"
+      >
+        Add Feedback
+      </button>
+    </div>
+  </div>
+</div>
